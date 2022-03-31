@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1> Images </h1>
+<h3>{{ utc_dt }}</h3>
+
+<ul>
+    {% for row in resp %}
+    <li class="load-images">{{ row }}</li>
+    <br>
+    <img src="{{ 'www.s3bucket.com/' + row.id|string }}" alt="{{ row.image }}" width="100">
+    <br>
+    <br>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1> Add image </h1>
+
+<p>add image to  app</p>
+
+<form action="/add" method="post" enctype="multipart/form-data">
+    <div class="message">
+        <label for="message">message:</label>
+        <input type="text" id="message" name="message" value="nice"><br><br>
+    </div>
+
+    <div class="tags">
+        <label for="tags">Choose a tag:</label>
+        <select name="tags" id="tags">
+          <optgroup label="Place 1">
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </optgroup>
+          <optgroup label="Place 2">
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </optgroup>
+        </select>
+        <br><br>
+    </div>
+
+    <div class="files">
+        <label for="files">Select image:</label>
+        <input type="file" id="files" name="files" accept="image/*" multiple>
+        <br><br>
+    </div>
+
+    <p>testing</p>
+
+
+  <input type="submit" value="Submit">
+</form>
+
+{% endblock %}

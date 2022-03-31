@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Meta data -->
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" type="text/css" />
+    <meta charset="UTF-8">
+    <title>app</title>
+    <meta name="description" content="app">
+</head>
+
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="menubar">
+            <a class="nav-link" href="{{ '/' }}">app</a>
+            <!-- <a class="nav-link" href="#">Search</a> -->
+            <a class="nav-link" href="{{ '/add' }}">Add</a>
+        </nav>
+
+    </header>
+
+    <!-- Main -->
+    <section class="main">
+        <div class="content">
+            {% block content %} {% endblock %}
+        </div>
+    </section>
+</body>
+
+</html>
